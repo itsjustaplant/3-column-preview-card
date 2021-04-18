@@ -1,0 +1,267 @@
+:root {
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --header-font: 'Big Shoulders Display', cursive;
+    --parag-font: 'Lexend Deca', sans-serif;
+}
+
+html {
+    background-color: var(--light-gray);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.main__left {
+    background-color: var(--bright-orange);
+}
+
+.main__mid {
+    background-color: var(--dark-cyan);
+}
+
+.main__right {
+    background-color: var(--very-dark-cyan);
+}
+
+h1 {
+    color: var(--light-gray);
+    font-family: var(--header-font);
+}
+
+p {
+    color: var(--transparent-white);
+    font-family: var(--parag-font);
+}
+
+button {
+    background-color: var(--light-gray);
+    border: var(--light-gray) 1px solid;
+}
+
+#button-left {
+    color: var(--bright-orange);
+}
+
+#button-mid {
+    color: var(--dark-cyan);
+}
+
+#button-right {
+    color: var(--very-dark-cyan);
+}
+
+button:hover {
+    color: var(--light-gray) !important;
+    background-color: transparent;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 599px) {
+    html {
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        scroll-snap-type: y mandatory;
+    }
+
+    .main__left {
+        width: 100vw;
+        height: 100vh;
+        padding: 10% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    .main__mid {
+        width: 100vw;
+        height: 100vh;
+        padding: 15% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    .main__right {
+        width: 100vw;
+        height: 100vh;
+        padding: 10% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    p {
+        font-size: 24px;
+        width: 90%;
+        height: 40%;
+    }
+
+    button {
+        width: 150px;
+        height: 50px;
+        border-radius: 24px;
+        font-size: 24px;
+        outline: none;
+
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 0;
+    }
+
+}
+
+@media screen
+and (min-width: 600px)
+and (max-width: 900px) {
+
+    html {
+        scroll-snap-type: y mandatory;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        scroll-snap-type: y mandatory;
+    }
+
+    .main__left {
+        width: 100vw;
+        height: 100vh;
+        padding: 10% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    .main__mid {
+        width: 100vw;
+        height: 100vh;
+        padding: 15% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    .main__right {
+        width: 100vw;
+        height: 100vh;
+        padding: 10% 5% 0 5%;
+        scroll-snap-align: start;
+    }
+
+    p {
+        font-size: 32px;
+        width: 90%;
+        height: 40%;
+    }
+
+    button {
+        width: 150px;
+        height: 50px;
+        border-radius: 24px;
+        font-size: 24px;
+        outline: none;
+    }
+}
+
+@media screen and
+(max-width: 1200px) and
+(min-width: 900px) {
+    main {
+        height: 500px;
+        width: 840px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10vh;
+    }
+
+    .main__left {
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 16px 0 0 16px;
+        padding: 5% 5% 0 5%;
+    }
+
+    .main__mid {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 5% 5% 0 5%;
+    }
+
+    .main__right {
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 0 16px 16px 0;
+        padding: 5% 5% 0 5%;
+    }
+
+    p {
+        font-size: 16px;
+        height: 40%;
+        padding-right: 0 !important;
+    }
+
+    button {
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+        border-radius: 24px;
+        outline: none;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        height: 600px;
+        width: 1140px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10vh;
+    }
+
+    .main__left {
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 16px 0 0 16px;
+        padding: 5% 5% 0 5%;
+    }
+
+    .main__mid {
+        flex-basis: 0;
+        flex-grow: 1;
+        padding: 5% 5% 0 5%;
+    }
+
+    .main__right {
+        flex-basis: 0;
+        flex-grow: 1;
+        border-radius: 0 16px 16px 0;
+        padding: 5% 5% 0 5%;
+    }
+
+    p {
+        font-size: 20px;
+        height: 40%;
+        padding-right: 0 !important;
+    }
+
+    button {
+        font-size: 18px;
+        width: 150px;
+        height: 50px;
+        border-radius: 24px;
+        outline: none;
+    }
+}
